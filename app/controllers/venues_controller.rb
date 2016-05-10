@@ -4,6 +4,6 @@ class VenuesController < ApplicationController
      @venues = Venue.all
    end
 
-   
+
 
 end

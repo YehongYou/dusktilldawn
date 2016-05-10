@@ -17,8 +17,6 @@ class CommentsController < ApplicationController
   def update
   end
 
-  end
-
   def delete
     @comment = Comment.find(params[:id])
     @comment.destroy

@@ -18,8 +18,6 @@ class EventsController < ApplicationController
   def update
   end
 
-  end
-
   def delete
     @event = Event.find(params[:id])
     @event.destroy

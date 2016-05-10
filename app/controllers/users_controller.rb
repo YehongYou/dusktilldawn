@@ -18,7 +18,6 @@ class EventsController < ApplicationController
   def update
   end
 
-  end
 
   def delete
     @user = User.find(params[:id])

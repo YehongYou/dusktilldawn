@@ -17,8 +17,6 @@ class LikesController < ApplicationController
   def update
   end
 
-  end
-
   def delete
     @like = Like.find(params[:id])
     @like.destroy

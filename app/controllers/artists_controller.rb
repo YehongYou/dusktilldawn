@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists = Artists.all
+    @artists = Artist.all
   end
 
   def new
@@ -16,8 +16,6 @@ class ArtistsController < ApplicationController
   end
 
   def update
-  end
-
   end
 
   def delete
