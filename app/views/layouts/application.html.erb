@@ -10,17 +10,33 @@
 <body>
 
   <header class='header-wrap'>
-    <div class="logo"></div>
     <div class="menu-wrapper">
+      <a href="/"><div class="logo"></div></a>
       <ul class="menu">
-        <li><a href="">Artists</a></li>
-        <li><a href="">Venues</a></li>
-        <li><a href="">Events</a></li>
+        <li><a href="/artists">Artists</a></li>
+        <li><a href="/venues">Venues</a></li>
+        <li><a href="/events">Events</a></li>
         <li><a href="">Near You</a></li>
         <li><a href="">Contact</a></li>
+        <li class="js-login-btn"><a href="">Log In</a></li>
+        <li><a href="/users/new">Sign Up</a></li>
+        <!-- <li><div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div></li>
+        <li id='status'></li> -->
+
       </ul>
+      <div class="login-popup-wrap">
+        <form class="login-popup" action="/sessions" method="post">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type="text" name="email" placeholder="Email Address" class="login-email">
+          <input type="password" name="password" placeholder="Password" class="login-password">
+          <button class="button">Log In</button>
+        </form>
+      </div>
+
+
     </div>
   </header>
+  <!-- Popup for User login -->
 
   <%= yield %>
 

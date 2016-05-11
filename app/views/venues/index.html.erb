@@ -1,0 +1,77 @@
+<div class="list"></div>
+
+<script id="venues-template" type='text/x-handlebars-template'>
+
+  <div class="item" data-venue-id="{{ id }}">
+
+    <div class="venue-image">
+      <img src="{{ image_url }}">
+    </div>
+
+    <div class="venue-details-wrap">
+
+      <div class="venue-type">
+        <h2>{{ type }}</h2>
+      </div>
+
+      <div class="venue-name">
+        <h2>{{ name }}</h2>
+      </div>
+
+      <div class="venue-suburb">
+        <h2>{{ suburb }}</h2>
+      </div>
+
+    </div>
+    <!-- <div class="like">
+      <h2>Likes</h2>
+      <span class="right likes">{{ like_count }}</span>
+    </div> -->
+
+  </div>
+
+</script>
+
+<script id="venue-details-template" type='text/x-handlebars-template'>
+
+  <div class="item-detail" data-venue-id="{{ id }}">
+
+    <div class="venue-image">
+      <img src="{{ image_url }}">
+    </div>
+
+    <div class="venue-details-wrap">
+
+      <div class="venue-type">
+        <h2>{{ type }}</h2>
+      </div>
+
+      <div class="venue-name">
+        <h2>{{ name }}</h2>
+      </div>
+
+      <div class="venue-address">
+        <h2>{{ address }}</h2>
+      </div>
+
+      <div class="venue-suburb">
+        <h2>{{ suburb }}</h2>
+      </div>
+
+      <div class="venue-desc">
+        <h2>{{ desc }}</h2>
+      </div>
+
+    </div>
+
+
+    <!-- <div class="like">
+      <h2>Likes</h2>
+      <span class="right likes">{{ like_count }}</span>
+    </div> -->
+
+  </div>
+  
+  <div class="back">BACK</div>
+
+</script>

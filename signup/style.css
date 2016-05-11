@@ -93,52 +93,6 @@
   color: white;
 }
 
-.login-popup-wrap {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  display: none;
-  background-color: #F9F9F9;
-  border: 1px solid #DADADA;
-  z-index: 2;
-}
-
-.login-popup {
-  text-align: left;
-  padding-left: 5px;
-  padding: 20px 35px;
-}
-
-.login-email, .login-password {
-  width: 200px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.logout-button {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 5px 15px;
-  margin-left: 5px;
-  background-color: white;
-  border-radius: 6px;
-  color: $sunset-orange;
-  border: 1px solid $sunset-orange;
-  transition: 0.3s;
-}
-
-.logout-button:hover {
-  background-color: $sunset-orange;
-  color: white;
-}
-
-.login {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px 35px;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
+.profile-image {
+  border-radius: 50%;
 }
