@@ -22,32 +22,34 @@
   <div class="user-venue-wrap group">
     <h2 class="user-h2">Manage your location</h2>
     <% @venues.each do |venue| %>
-      <div class="item-user">
-        <div class="venue-image">
-          <% if venue.image == nil %>
-            <img src="http://www.molotowcocktail.eu/images/slider-img4.jpg">
-          <% else %>
-            <img src="<%= venue.image %>">
-          <% end %>
+      <a href="/venues/<%= venue.id %>">
+        <div class="item-user">
+          <div class="venue-image">
+            <% if venue.image == nil %>
+              <img src="http://www.molotowcocktail.eu/images/slider-img4.jpg">
+            <% else %>
+              <img src="<%= venue.image %>">
+            <% end %>
+          </div>
+
+          <div class="venue-details-wrap">
+
+            <div class="venue-type">
+              <h2><%= venue.venue_type.upcase %></h2>
+            </div>
+
+            <div class="venue-name">
+              <h2><%= venue.name %></h2>
+            </div>
+
+            <div class="venue-suburb">
+              <h2><%= venue.suburd %></h2>
+            </div>
+
+          </div>
         </div>
+      </a>
 
-        <div class="venue-details-wrap">
-
-          <div class="venue-type">
-            <h2><%= venue.venue_type.upcase %></h2>
-          </div>
-
-          <div class="venue-name">
-            <h2><%= venue.name %></h2>
-          </div>
-
-          <div class="venue-suburb">
-            <h2><%= venue.suburd %></h2>
-          </div>
-
-
-        </div>
-      </div>
     <% end %>
   </div>
 

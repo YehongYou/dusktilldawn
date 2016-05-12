@@ -42,7 +42,9 @@ $( document ).on('ready', function() {
   $('.events-part').hide();
   $('.comments-part').hide();
     // =================  leo changed here ========
+    console.log('hellho');
   $('.list').on('click', '.venue-image', function(event) {
+    console.log('hello');
                          // '.item'
     $('.list').empty();
     // $('.events-list').empty();

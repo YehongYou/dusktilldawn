@@ -13,6 +13,8 @@
 <form class="form-wrap typical-form" action="/users" method="post" enctype="multipart/form-data">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
+  <h1 class="form-title"> I am a Normal User! </h1>
+
   <div class="input">
     <input type="hidden" name="user_type_id" value="normal user">
   </div>
@@ -53,6 +55,8 @@
 
 <form class="form-wrap owner-form" action="/users" method="post" enctype="multipart/form-data">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <h1 class="form-title"> I am a Venue Owner! </h1>
 
   <div class="input">
     <input type="hidden" name="user_type_id" value="owner">

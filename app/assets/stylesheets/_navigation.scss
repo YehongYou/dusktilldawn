@@ -18,7 +18,6 @@
 
 .menu-wrapper {
   color: white;
-  opacity: 0.8;
   line-height: 50px;
   text-align: right;
 }
@@ -96,10 +95,11 @@
 
 .login-popup-wrap {
   position: absolute;
-  top: 60px;
+  top: 55px;
   right: 0;
   display: none;
-  background-color: #F9F9F9;
+  background-color: #555;
+  border-radius: 6px;
   border: 1px solid #DADADA;
   z-index: 2;
 }
@@ -108,6 +108,7 @@
   text-align: left;
   padding-left: 5px;
   padding: 20px 35px;
+  padding-bottom: 10px;
 }
 
 .login-email, .login-password {

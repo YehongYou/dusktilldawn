@@ -1,0 +1,33 @@
+<div class="venue-wrapper group">
+  <div class="venue-options-wrap">
+    <div class="venue-detail-name">
+      <%= @venue.name %>
+    </div>
+
+    <div class="venue-detail-options">
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+  </div>
+
+  <div class="venue-detail-image">
+    <div class="venue-type venue-detail-venue-type">
+      <%= @venue.venue_type.upcase %>
+    </div>
+    <% if @venue.image == nil %>
+      <img src="http://www.molotowcocktail.eu/images/slider-img4.jpg">
+    <% else %>
+      <img src="<%= @venue.image %>">
+    <% end %>
+  </div>
+
+  <div class="venue-detail-address">
+    <span>Address: </span> <%= @venue.address %>, <%= @venue.suburd %> <%= @venue.postcode %>
+  </div>
+
+
+
+  <div class="venue-detail-description">
+    <%= @venue.description %>
+  </div>
+</div>

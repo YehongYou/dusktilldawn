@@ -58,3 +58,49 @@
 .event-item h5{
   margin: 5px;
 }
+
+// Bev
+.venue-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+.venue-options-wrap {
+  width: 100%;
+  margin-top: 40px;
+  margin: 0 auto;
+}
+.venue-detail-options {
+  text-align: right;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: inline-block;
+  width: 35%;
+  float: right;
+  vertical-align: top;
+}
+.venue-detail-image {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  margin-top: 0px;
+  position: relative;
+}
+.venue-detail-image img {
+  width: 100%;
+  border-radius: 6px
+}
+.venue-detail-name {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  margin-top: 35px;
+  font-size: 30px;
+}
+.venue-detail-address {}
+.venue-detail-suburb {}
+.venue-detail-postcode {}
+.venue-detail-venue-type {
+  top: 100px;
+  color: black;
+}
+.venue-detail-description {}
