@@ -29,11 +29,16 @@ class EventsController < ApplicationController
     event = Event.new
     event.name = params[:name]
     event.image= params[:image]
-    event.event_time = params[:event_time]
+    date = params[:date]
+    time = params[:time]
+    event_time = date + ' ' + time
+    event.event_time = event_time
     event.genre_id = params[:genre_id]
     event.venue_id = params[:venue_id]
     event.description = params[:description]
-    event.save
+    if event.save
+      render :index
+    end
   end
 
   def show

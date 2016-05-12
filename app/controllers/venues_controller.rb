@@ -16,7 +16,7 @@ class VenuesController < ApplicationController
     venue.postcode = params[:postcode]
     venue.venue_type = params[:venue_type]
     venue.image = params[:image]
-    venue.user_id = params[:user_id]
+    venue.user_id = current_user.id
     venue.description = params[:description]
     venue.save
   end

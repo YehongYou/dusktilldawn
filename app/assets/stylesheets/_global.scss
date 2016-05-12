@@ -109,3 +109,13 @@ textarea {
   outline: 0;
   margin-bottom: 20px;
 }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.list {
+  float: left;
+}

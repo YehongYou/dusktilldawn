@@ -1,50 +1,47 @@
 $(document).on('ready', function() {
 
-    function showEvents() {
-        if ($('#events-template').length) {
+  function showEvents() {
+    if ($('#events-template').length) {
 
-            console.log('hello');
+      $.ajax({
+        url: 'http://localhost:3000/api/events'
+      }).done(function(events) {
+        console.log('events', events)
+        $.each(events, function(index, event) {
+          var template = $('#events-template').html();
+          console.log(events);
+          var templateFunction = Handlebars.compile(template);
 
-            $.ajax({
-                url: 'http://localhost:3000/api/events'
-            }).done(function(events) {
+          if (event.image == undefined) {
+            eventImage = "http://www.molotowcocktail.eu/images/slider-img4.jpg"
+          } else {
+            eventImage = event.image
+          };
 
-                $.each(events, function(index, event) {
-                    var template = $('#events-template').html();
-                    console.log(events);
-                    var templateFunction = Handlebars.compile(template);
+          var html = templateFunction({
+            name: event.name,
+            id: event.id,
+            // type: event.venue.venue_type,
+            image_url: eventImage,
+            // venue: event.venue.name,
+            like_count: event.like_count
+          });
 
-                    if (event.image == undefined) {
-                        eventImage = "http://www.molotowcocktail.eu/images/slider-img4.jpg"
-                    } else {
-                        eventImage = event.image
-                    };
+          var $newDiv = $(html);
+          var $newLink = $("<a />", {
+            href : '/events/' + event.id,
+            text : "Click for details.."
+          });
 
-                    var html = templateFunction({
-                        name: event.name,
-                        id: event.id,
-                        type: event.venue.venue_type,
-                        image_url: eventImage,
-                        venue: event.venue.name,
-                        like_count: event.like_count
-                    });
+          $($newDiv).append($newLink);
+          $('.list').append($newDiv);
 
-                    var $newDiv = $(html);
-                    var $newLink = $("<a />", {
-                      href : '/events/' + event.id,
-                      text : "Click for details.."
-                    });
+        });
+      });
+    };
+  }
 
-                    $($newDiv).append($newLink);
-                    $('.list').append($newDiv);
-
-
-                });
-            });
-        };
-    }
-
-    showEvents();
+  showEvents();
 
 
     // $('.list').on('click', '.item', function(event) {
