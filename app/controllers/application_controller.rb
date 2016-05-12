@@ -16,10 +16,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :logged_in?
 
-  def current_image
+  def current_user_name
     user = User.find_by(id: session[:user_id])
-    @current_image = user[:image]
+    # @current_image = user[:image]
+    @current_user_name = user[:name]
   end
-  helper_method :current_image
+  helper_method :current_user_name
 
 end

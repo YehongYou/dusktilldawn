@@ -140,6 +140,17 @@
    venue6.description = "Split-space East/West-themed bar with plush banquettes, bunker-style decor and bathtub tables."
    venue6.save
 
+   venue7 = Venue.new
+   venue7.name = "The Alchemist"
+   venue7.address ="361 Brunswick St, Fitzroy VIC 3065"
+   venue7.suburd = "Fitzroy"
+   venue7.postcode = 3065
+   venue7.venue_type = 'bar'
+   venue7.image = 'http://www.cityfied.com.au/uploads/thealchemistbar-7940.jpg'
+   venue7.user_id = user2.id
+   venue7.description = "Cocktails and share plates in a lavish space with vintage lounges and black-and-white prints."
+   venue7.save
+
   # genres table
 
 
