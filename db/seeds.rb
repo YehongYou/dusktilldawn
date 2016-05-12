@@ -36,7 +36,7 @@
    user.password = '1234'
    user.name = 'dt'
    user.gender = 'male'
-   user.image = ''
+   user.image = 'https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/1700/thumb_HEADSHOTS__2001_.jpg'
    user.user_type_id = type.id
    user.save
 
@@ -45,9 +45,12 @@
    user2.password = '1234'
    user2.name = 'bev'
    user2.gender = 'female'
-   user2.image = ''
+   user2.image = 'http://images.harrods.com/img/content/style-insider/mcm-bebe-boo-lp.jpg?dwn=390px:475px'
    user2.user_type_id = type2.id
    user2.save
+
+
+
 #  venuse table
    venue = Venue.new
    venue.name = "Precint Hotel"

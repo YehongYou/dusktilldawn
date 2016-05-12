@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !!current_user
     # Will return true if there is a user logged in.
+
   end
   helper_method :logged_in?
+
+  def current_image
+    user = User.find_by(id: session[:user_id])
+    @current_image = user[:image]
+  end
+  helper_method :current_image
+
 end

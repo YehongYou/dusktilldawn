@@ -23,7 +23,7 @@
         <li id='status'></li> -->
         <% if logged_in? %>
         <!-- Avatar & Username -->
-        <li><a href="/users/<%= session[:user_id] %>" class="header-link login-name"><img src="/assets/user.png" class="login-avatar"></a></li>
+        <li><a href="/users/<%= session[:user_id] %>" class="header-link login-name"><img src="<%= current_image%>"class="login-avatar"></a></li>
 
         <!-- Log Out Button -->
         <li><form action="/sessions" method="post" class="logout-form">
@@ -54,6 +54,8 @@
 
     </div>
   </header>
+
+
   <!-- Popup for User login -->
 
   <%= yield %>

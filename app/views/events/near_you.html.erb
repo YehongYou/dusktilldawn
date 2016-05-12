@@ -48,7 +48,8 @@ function success(position) {
   var userLocInfoWindow = new google.maps.InfoWindow({
     content: userLocationText,
     maxWidth: 300
-  });marker.addListener('mouseover', function() {
+  });
+  marker.addListener('mouseover', function() {
     userLocInfoWindow.open(map, marker);
   });
 
@@ -81,7 +82,9 @@ function success(position) {
       markerBar.addListener('mouseover', function() {
         infowindow.open(map, markerBar);
       });
-      (map,markerBar);
+      /*markerBar.addListener('mouseout', function() {
+        infowindow.close(map, markerBar);
+      });*/
 
     });
   });
