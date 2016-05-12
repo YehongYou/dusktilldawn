@@ -1,48 +1,90 @@
-<% if @user.user_type_id == 7 %>
+<% if @user.user_type_id == 9 %>
   <h1>Normal User</h1>
 
-<% elsif @user.user_type_id == 8 %>
+<% elsif @user.user_type_id == 10 %>
 
   <div class="profile-wrap">
     <h1>Welcome <%= @user.name %></h1>
 
-  <% if @user.image == nil %>
-    <div class="profile-avatar">
-      <img src="/assets/Icon-user.png" alt="">
-    </div>
-  <% end %>
-
-  <button>Add Venue</button>
-  <button>Create Event</button>
-
-</div>
-
-<% end %>
-
-<script id="venues-template" type='text/x-handlebars-template'>
-
-  <div class="item" data-venue-id="{{ id }}">
-
-    <div class="venue-image">
-      <img src="{{ image_url }}">
-    </div>
-
-    <div class="venue-details-wrap">
-
-      <div class="venue-type">
-        <h2>{{ type }}</h2>
+    <% if @user.image == nil %>
+      <div class="profile-avatar">
+        <img src="/assets/Icon-user.png" alt="">
       </div>
+    <% end %>
 
-      <div class="venue-name">
-        <h2>{{ name }}</h2>
-      </div>
+    <button class="add-venue">Add Venue</button>
+    <button class="add-event">Create Event</button>
 
-      <div class="venue-suburb">
-        <h2>{{ suburb }}</h2>
-      </div>
-
-    </div>
+    <div class="create-venue"></div>
 
   </div>
 
-</script>
+  <form class="form-wrap add-venue-form" action="/venues" method="post" enctype="multipart/form-data">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <div class="input">
+      <label>Venue Type</label></br></br>
+      <input type="radio" name="venue-type" value="bar"> Bar
+      <input type="radio" name="venue-type" value="club"> Club
+    </div>
+
+    <div class="input">
+      <label>Venue Name</label>
+      <input type="text" name="name" placeholder="User Name" class="signup-input">
+    </div>
+
+    <div class="input">
+      <label>Address</label>
+      <input type="text" name="address" placeholder="Address" class="signup-input">
+    </div>
+
+    <div class="input">
+      <label>Image</label>
+      <input type="file" name="image" class="avatar-input">
+    </div>
+
+    <div class="input">
+      <label>Suburb</label>
+      <input type="text" name="suburd" placeholder="Suburb" class="signup-input">
+    </div>
+
+    <div class="input">
+      <label>Post Code</label>
+      <input type="text" name="postcode" placeholder="Post Code" class="signup-input">
+    </div>
+
+    <div class="input">
+      <label>Description</label></br>
+      <textarea name="description" placeholder="Tell us more about your club!"></textarea>
+    </div>
+
+    <button>Create Venue!</button>
+  </form>
+
+  <form class="form-wrap add-event-form" action="/events" method="post" enctype="multipart/form-data">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <div class="input">
+      <label>Event Name</label>
+      <input type="text" name="name" placeholder="Event Name" class="signup-input">
+    </div>
+
+    <div class="input">
+      <label>Poster</label>
+      <input type="file" name="image" class="avatar-input">
+    </div>
+
+    <div class="input">
+      <label>Event Date</label>
+      <input type="datetime" name="date" class="signup-input datepicker">
+    </div>
+
+    <div class="input">
+      <label>Event Time</label>
+      <input type="text" name="time" class="signup-input timepicker">
+    </div>
+
+    <button>Create Event</button>
+  </form>
+
+<% end %>

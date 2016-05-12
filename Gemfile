@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 #Find geo coordinates
 gem 'geocoder'
+gem 'pikaday-gem', '~> 1.4'
+gem 'momentjs-rails'
 
 gem 'rack-cors', :require => 'rack/cors'
 # Use Unicorn as the app server

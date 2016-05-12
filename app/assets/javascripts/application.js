@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.timepicker.min
 //= require handlebars-v4.0.5
+//= require moment
+//= require pikaday
 //= require venues
+//= require create_venue
 //= require events
 //= require index
 //= require facebook_login

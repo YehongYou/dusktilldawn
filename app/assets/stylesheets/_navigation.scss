@@ -1,10 +1,11 @@
 .header-wrap {
   width: 100%;
+  background-color: black;
 }
 
 .logo {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 18px;
   height: 17px;
   width: 253px;
@@ -121,7 +122,7 @@
   cursor: pointer;
   padding: 5px 15px;
   margin-left: 5px;
-  background-color: white;
+  background-color: #333;
   border-radius: 6px;
   color: $sunset-orange;
   border: 1px solid $sunset-orange;
@@ -141,4 +142,10 @@
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
+}
+
+.login-avatar {
+  width: 22px;
+  position: relative;
+  top: 6px;
 }

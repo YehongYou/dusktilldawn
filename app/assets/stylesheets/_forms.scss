@@ -1,0 +1,89 @@
+
+.typical-form, .owner-form, .add-venue-form, .add-event-form {
+  width: 50%;
+  margin: 0 auto;
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.select-typical {
+  background-image: url('form-normal.png');
+  background-position: center center;
+  border-radius: 5%;
+}
+.select-owner {
+  background-image: url('form-owner.png');
+  background-position: center center;
+  border-radius: 5%;
+}
+.select-artist {
+  background-image: url('form-artist.png');
+  background-position: center center;
+  border-radius: 5%;
+}
+
+.form-wrap {
+  border: 2px solid #555;
+  margin: 50px auto;
+  padding: 0 50px;
+  border-radius: 3%;
+}
+
+.input {
+  margin: 20px auto;
+}
+
+.list {
+  text-align: center;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.item {
+  width: 25%;
+  display: inline-block;
+  margin: 10px 20px;
+  border: 1px solid black;
+  position: relative;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 6px;
+}
+.item-detail {
+  width: 60%;
+  display: inline-block;
+  margin: 10px 20px;
+  border: 1px solid black;
+  position: relative;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.venue-details-wrap {
+  margin: 15px;
+  text-align: left;
+}
+
+.venue-name, .venue-suburb, .venue-desc, .venue-address {
+  margin-bottom: 10px;
+}
+
+.venue-address, .venue-suburb {
+  display: inline-block;
+}
+
+.venue-type {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 12px;
+}
+
+.back {
+  cursor: pointer;
+  width: 5%;
+  margin: 0 auto;
+}
