@@ -30,10 +30,7 @@ $(document).on('ready', function() {
             type: event.venue.venue_type,
             image_url: eventImage,
             venue: event.venue.name,
-
-            event_time: event.event_time,
             like_count: event.like_count
-
             event_time: new_date
 
           });
