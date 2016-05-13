@@ -4,8 +4,7 @@ $(document).ready(function(){
     $("ul").toggleClass("show");
     $(".search-outerwrap").toggleClass("scroll");
     $(".logo").toggleClass("hide");
-
-
-
+  
   });
+
 })
