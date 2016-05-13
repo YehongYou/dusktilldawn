@@ -9,17 +9,17 @@
 }
 
 .select-typical {
-  background-image: url('form-normal.png');
+  background-image: image-url('form-normal.png');
   background-position: center center;
   border-radius: 5%;
 }
 .select-owner {
-  background-image: url('form-owner.png');
+  background-image: image-url('form-owner.png');
   background-position: center center;
   border-radius: 5%;
 }
 .select-artist {
-  background-image: url('form-artist.png');
+  background-image: image-url('form-artist.png');
   background-position: center center;
   border-radius: 5%;
 }

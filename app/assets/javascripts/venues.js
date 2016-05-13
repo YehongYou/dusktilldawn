@@ -4,7 +4,7 @@ $( document ).on('ready', function() {
     if($('#venues-template').length){
 
       $.ajax({
-        url: 'http://localhost:3000/api/venues'
+        url: '/api/venues'
       }).done(function(venues) {
 
         $.each(venues, function(index, venue) {
@@ -53,7 +53,7 @@ $( document ).on('ready', function() {
     console.log(venueId);
 
     $.ajax({
-      url: 'http://localhost:3000/api/venues/' + venueId
+      url: '/api/venues/' + venueId
     }).done(function(data) {
       console.log(data);  // changed by leo,  below add all data. in the front of venue
                //venue
@@ -139,7 +139,7 @@ $( document ).on('ready', function() {
        var venueId = $('.item-detail').data('venue-id');
        if ($('#input_comment').val() != '') {
            $.ajax({
-             url: 'http://localhost:3000/api/comments',
+             url: '/api/comments',
              method: 'post',
              data: {content: $('#input_comment').val(), venue_id: venueId }
            }).done(function(response){
