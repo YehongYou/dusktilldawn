@@ -131,7 +131,25 @@ box-shadow:         -1px -1px 5px 0px rgba(10, 10, 10, 0.75);
 .venue-detail-suburb {}
 .venue-detail-postcode {}
 .venue-detail-venue-type {
-  top: 100px;
+  top: 12px;
   color: black;
 }
 .venue-detail-description {}
+
+.venue-edit, .venue-delete {
+  display: inline-block;
+}
+.venue-edit {
+  display: inline;
+  text-align: left;
+  width: 70%;
+}
+.venue-page-edit {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.edit-title {
+  text-align: center;
+  margin: 30px;
+}

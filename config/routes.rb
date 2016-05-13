@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/' => 'users#index'
   get '/near_you' => 'events#near_you'
 
+  get '/contact' => 'home#contact'
+
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
 # ================ normal controllers =====================

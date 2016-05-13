@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore.js
 //= require jquery.timepicker.min
 //= require handlebars-v4.0.5
 //= require moment

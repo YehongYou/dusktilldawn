@@ -1,0 +1,38 @@
+//paul
+
+.prof_image {
+  // width: 300px;
+  display: block;
+  border-radius:50%;
+  height: 100px;
+}
+
+.contact_profiles {
+  display: inline-block;
+  // max-width: 48%;
+  box-sizing: border-box;
+  text-align: justify;
+  margin: 20px 0px 0px 0px;
+  float:left;
+  width:45%;
+
+}
+
+.profile-image {
+  text-align:center;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+
+  }
+
+
+.bio {
+  width: 60%;
+  display: inline-block;
+}
+
+#right, #left{
+  width: 48%;
+  display: inline-block;
+}

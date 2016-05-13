@@ -5,8 +5,18 @@
     </div>
 
     <div class="venue-detail-options">
-      <button>Edit</button>
-      <button>Delete</button>
+
+      <a href="/venues/<%= @venue.id %>/edit">
+        <button>Edit</button>
+      </a>
+
+
+      <form action="/venues/<%= @venue.id %>" class="venue-delete" method="post" enctype="multipart/form-data">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="hidden" value="delete" name="_method">
+        <button>Delete</button>
+      </form>
+
     </div>
   </div>
 

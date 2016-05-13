@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       user.user_type_id = UserType.find_by(name: params[:user_type_id]).id
     end
     if user.save
-      render :index
+      redirect_to "/"
     end
   end
 
