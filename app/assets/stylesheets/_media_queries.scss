@@ -5,10 +5,15 @@
 }
 
 // cards
-a :hover {
+.list :hover {
   opacity: 0.9;
   background-color: grey;
 }
+.list-all-events a :hover {
+  opacity: 0.9;
+  background-color: grey;
+}
+
 .event-name {
   margin-top: 20px;
 }
