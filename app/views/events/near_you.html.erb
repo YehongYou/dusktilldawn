@@ -44,7 +44,7 @@
                 userLocInfoWindow.open(map, marker);
             });
 
-            $.ajax({url: 'http://localhost:3000/api/venues', type: 'get', dataType: 'JSON'}).done(function (response) {
+            $.ajax({url: '/api/venues', type: 'get', dataType: 'JSON'}).done(function (response) {
                 console.log(response)
 
                 response.forEach(function (venue) {
