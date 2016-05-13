@@ -30,8 +30,10 @@ $(document).on('ready', function() {
             type: event.venue.venue_type,
             image_url: eventImage,
             venue: event.venue.name,
+
             event_time: new_date,
             like_count: event.like_count
+
 
           });
           var $newDiv = $(html);
