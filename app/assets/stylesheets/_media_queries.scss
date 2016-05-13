@@ -106,6 +106,10 @@ a :hover {
     width: 40%;
     height: 30%;
   }
+  #sortBtn {
+    position: relative;
+    top: 30px;
+  }
 
 
 }
@@ -134,8 +138,5 @@ a :hover {
     width: 50%;
     height: 200px;
   }
-  #sortBtn {
-    position: relative;
-    top: 30px;
-  }
+
 }
