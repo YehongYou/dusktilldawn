@@ -34,7 +34,7 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @venue.name = params[:name]
     @venue.address = params[:address]
-    @venue.suburd = params[:suburb]
+    @venue.suburd = params[:suburd]
     @venue.postcode = params[:postcode]
     @venue.venue_type = params[:venue_type]
     @venue.image = params[:image]
@@ -46,7 +46,7 @@ class VenuesController < ApplicationController
   def destroy
     @venue = Venue.find(params[:id])
     @venue.destroy
-    redirect_to "/users/#{params[:id]}"
+    redirect_to "/users/" + @venue.user_id.to_s
   end
 
 end
