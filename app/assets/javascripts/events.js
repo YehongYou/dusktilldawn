@@ -4,7 +4,7 @@ $(document).on('ready', function() {
     if ($('#events-template').length) {
 
       $.ajax({
-        url: 'http://localhost:3000/api/events'
+        url: '/api/events'
       }).done(function(events) {
 
         $.each(events, function(index, event) {
@@ -53,7 +53,7 @@ $(document).on('ready', function() {
     $('#sortBtn').on('click', function(){
         $('.list-all-events').empty();
         $.ajax({
-          url: 'http://localhost:3000/api/events'
+          url: '/api/events'
         }).done(function(events){
             var orderEvents = _.sortBy(events, 'event_time');
 
