@@ -27,6 +27,6 @@ Geocoder to integrate automatically latitude and logitude to our venues table, s
 
 ***
 ## Deployment Link
-[Try DuskTillDawn](https://dusktilldown.herokuapp.com)
+[Try DuskTillDawn](https://dusktilldawn.herokuapp.com)
 ## Challenges
 To solve conflicts and merge codes on the Github.
