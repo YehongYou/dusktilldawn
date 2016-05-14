@@ -24,8 +24,8 @@ Geocoder to integrate automatically latitude and logitude to our venues table, s
 - Club owners can manager their venues and events information with (ADD, EDIT and DELETE) operations.
 - User can check the bars on map of website.
 - After login, user can leave comments or press likes button for venue.
-***
 
+***
 ## Deployment Link
 [Try DuskTillDawn](https://dusktilldown.herokuapp.com)
 ## Challenges
